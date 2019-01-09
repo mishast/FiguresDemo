@@ -36,6 +36,8 @@ cd Figures.Web
 dotnet run
 ```
 
+Then open https://localhost:5001/
+
 To run Console App
 
 ``` bash
