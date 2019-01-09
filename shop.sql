@@ -54,21 +54,21 @@ Id | Name
 4  | Blender
 5  | Washmachine
 
-Id	| Name
+Id  | Name
 ----+-------------------
-1	| Electronic devices
-2	| Kitchen
-3	| Home
+1   | Electronic devices
+2   | Kitchen
+3   | Home
 
 ProductId | ProductName | CategoryId | CategoryName
 ----------+-------------+------------+-------------------
 1         | Car	        | NULL       | NULL
-2         | Computer	| 1          | Electronic devices
-3         | Microwave	| 1          | Electronic devices
-3         | Microwave	| 2          | Kitchen
-3         | Microwave	| 3          | Home
-4         | Blender	    | 1          | Electronic devices
-4         | Blender	    | 2          | Kitchen
-4         | Blender	    | 3          | Home
-5         | Washmachine	| 1          | Electronic devices
-5         | Washmachine	| 3          | Home
+2         | Computer    | 1          | Electronic devices
+3         | Microwave   | 1          | Electronic devices
+3         | Microwave   | 2          | Kitchen
+3         | Microwave   | 3          | Home
+4         | Blender     | 1          | Electronic devices
+4         | Blender     | 2          | Kitchen
+4         | Blender     | 3          | Home
+5         | Washmachine | 1          | Electronic devices
+5         | Washmachine | 3          | Home
