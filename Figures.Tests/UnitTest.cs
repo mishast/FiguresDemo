@@ -61,6 +61,31 @@ namespace Figures.Tests
         }
 
         [Fact]
+        public void TestTriangleIsRecnagle()
+        {
+            bool isRectangular = false;
+
+            Triangle triangle = new Triangle();
+            triangle.SetParams(10, 10, 10);
+            
+            isRectangular = triangle.IsRectangular();
+
+            Assert.Equal(isRectangular, false);
+
+            triangle.SetParams(3, 4, 5);
+
+            isRectangular = triangle.IsRectangular();
+
+            Assert.Equal(isRectangular, true);
+
+            triangle.SetParams(3, 3, 4.242640687m);
+
+            isRectangular = triangle.IsRectangular(0.00000001m);
+
+            Assert.Equal(isRectangular, true);
+        }
+
+        [Fact]
         public void TestTriangleOverflow()
         {
             Triangle triangle = new Triangle();

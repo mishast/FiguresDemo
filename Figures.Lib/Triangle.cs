@@ -40,15 +40,21 @@ namespace Figures.Lib
             return valid;
         }
 
-        public bool IsRectangular()
+        /// <summary>
+        /// Checks if triangle is rectangular
+        /// </summary>
+        public bool IsRectangular(decimal epsilon = 0m)
         {
+            if (!IsValid()) throw new System.ArgumentException("The triangle is invalid");
+
+            // Using Pythagorean theorem
             decimal sideA2 = _sideA * _sideA;
             decimal sideB2 = _sideB * _sideB;
             decimal sideC2 = _sideC * _sideC;
 
-            if (sideA2 == sideB2 + sideC2) return true;
-            if (sideB2 == sideA2 + sideC2) return true;
-            if (sideC2 == sideA2 + sideB2) return true;
+            if (Math.Abs(sideA2 - (sideB2 + sideC2)) <= epsilon) return true;
+            if (Math.Abs(sideB2 - (sideA2 + sideC2)) <= epsilon) return true;
+            if (Math.Abs(sideC2 - (sideA2 + sideB2)) <= epsilon) return true;
 
             return false;
         }
